@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  font-family: "Lora", serif;
+}
+a {
+  color: #205929 !important;
+}
+.transition-group {
+  position: relative;
+}
+
+.right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.right-exit {
+  opacity: 1;
+}
+.right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.right-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.left-exit {
+  opacity: 1;
+}
+.left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.left-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.down-enter {
+  opacity: 0;
+  transform: translateY(100vh);
+}
+.down-exit {
+  opacity: 1;
+}
+.down-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.down-exit-active {
+  opacity: 0;
+  transform: translateY(-100vh);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.up-enter {
+  opacity: 0;
+  transform: translateY(-100vh);
+}
+.up-exit {
+  opacity: 1;
+}
+.up-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.up-exit-active {
+  opacity: 0;
+  transform: translateY(100vh);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.5s;
+  margin: 0 0 0 30px;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+@media screen and (min-width: 768px) {
+  .backIcon {
+    position: absolute;
+    top: -6px;
+    left: -60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .backIcon {
+    display: none !important;
+  }
+}
+.bi-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+}
+.bi-x {
+  display: none;
+  font-size: 20px;
+}
+.bi-send-fill,
+.bi-telephone-fill,
+.bi-globe-central-south-asia {
+  color: white;
+  font-size: 60px;
+}
