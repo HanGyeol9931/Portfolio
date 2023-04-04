@@ -27,7 +27,6 @@ export const ModalBox = styled.div`
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 10px;
   background-color: white;
-  
   @media screen and (max-width: 991px) {
     width: 70vw;
     height: auto;
