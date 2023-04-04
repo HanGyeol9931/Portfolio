@@ -9,7 +9,6 @@ import { useState } from "react";
 
 function Animation() {
   const [url,setUrl] = useState("right")
-  console.log(url);
   const location = useLocation();
   return (
     <TransitionGroup className="transitions-wrapper">

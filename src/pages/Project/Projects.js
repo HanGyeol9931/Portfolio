@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <>
       <ProjectsContainer>
-        <ProjectsCotentsDiv>
+        <ProjectsCotentsDiv open={modal}>
           <Modal open={modal} setOpen={setModal} show={show} />
           <ProjectsBox modal={modal} setModal={setModal} setShow={setShow} />
         </ProjectsCotentsDiv>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ModalContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: ${(props) => (props.open ? "100" : "-100")};
@@ -14,9 +14,7 @@ export const ModalContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 767px) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 10px;
   }
 `;
 export const ModalBox = styled.div`
@@ -24,15 +22,19 @@ export const ModalBox = styled.div`
   flex-direction: column;
   align-content: center;
   width: 1000px;
-  height: 800px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 10px;
   background-color: white;
-  @media screen and (max-width: 767px) {
-    width: 100vw;
+  
+  @media screen and (max-width: 991px) {
+    width: 70vw;
     height: auto;
+  }
+  @media screen and (max-width: 767px) {
+    width: 80vw;
+    height: 70vh;
   }
 `;
 export const ModalBoxTop = styled.div`

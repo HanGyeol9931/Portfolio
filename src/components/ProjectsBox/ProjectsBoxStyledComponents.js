@@ -11,7 +11,6 @@ export const ProjectsCotents = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1200px;
-  padding: 60px 60px 30px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -30,7 +29,9 @@ export const ProjectsCotents = styled.div`
 `;
 
 export const ProjectsTitle = styled.div`
-  margin: 20px 0 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  /* margin: 20px 0 50px; */
   text-align: center;
   color: #205929;
   font-size: 60px;

@@ -29,9 +29,9 @@ const Content = ({ show }) => {
     window.open(data.page.link);
   }
   function gitHubOpen() {
-      console.log(data.page.github);
+    console.log(data.page.github);
     if (data.page.github === "") {
-        alert("회사 API주소 노출문제로 인해 코드 미공개")
+      alert("회사 API주소 노출문제로 인해 코드 미공개");
       return;
     }
     window.open(data.page.github);

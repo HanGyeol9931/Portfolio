@@ -7,8 +7,12 @@ export const ContentContainer = styled.div`
   height: 100%;
   padding: 20px 0;
   @media screen and (max-width: 767px) {
+    ::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;
     grid-template-columns: 1fr;
   }
 `;
@@ -18,9 +22,13 @@ export const ContentContentImg = styled.img`
   border-radius: 20px;
   width: 80%;
   height: 700px;
+  @media screen and (max-width: 991px) {
+    width: 30vw;
+    height: 50vh;
+  }
   @media screen and (max-width: 767px) {
-    width: 80vw;
-    height: 30vh;
+    width: 60vw;
+    height: 20vh;
   }
 `;
 export const ContentContentImgDiv = styled.div`
@@ -38,8 +46,11 @@ export const ContentContentTitle = styled.div`
   font-size: 50px;
   text-align: center;
   color: #205929;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     font-size: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
     padding: 10px 0;
   }
 `;
@@ -47,6 +58,12 @@ export const ContentContentSmallTitle = styled.span`
   font-family: "Noto Sans KR", "Nanum Gothic";
   font-weight: bold;
   font-size: 20px;
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 15px;
+  }
 `;
 export const ContentContentText = styled.span`
   font-family: "Noto Sans KR", "Nanum Gothic";
@@ -55,6 +72,12 @@ export const ContentContentText = styled.span`
 export const ContentContentTexts = styled.p`
   font-family: "Noto Sans KR", "Nanum Gothic";
   font-size: 20px;
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 15px;
+  }
 `;
 
 export const ContentContentBtn = styled.button`
@@ -71,6 +94,11 @@ export const ContentContentBtn = styled.button`
     color: white;
     background-color: #205929;
   }
+  @media screen and (max-width: 991px) {
+    height: auto;
+    margin: 10px;
+    padding: 5px 15px;
+  }
 `;
 export const ContentContentBtns = styled.div`
   display: flex;
@@ -82,7 +110,7 @@ export const ContentContentDate = styled.div`
   text-align: center;
   font-size: 30px;
   padding: 10px 0 30px;
-  @media screen and (max-width: 767px) {
-    font-size: 20px;
+  @media screen and (max-width: 991px) {
+    font-size: 15px;
   }
 `;
