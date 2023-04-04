@@ -39,7 +39,7 @@ const Content = ({ show }) => {
   return (
     <ContentContainer>
       <ContentContentImgDiv>
-        <ContentContentImg src={data.img} />
+        <ContentContentImg view={data.view} src={data.img} />
       </ContentContentImgDiv>
       <ContentContent>
         <ContentContentTitle>{data.title}</ContentContentTitle>

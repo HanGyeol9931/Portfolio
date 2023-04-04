@@ -6,6 +6,7 @@ const Data = () => {
     report: {
       title: "Report Chenel",
       date: "(Mobile Web) 23.01.04 ~ 23.02.24",
+      view:"Mobile",
       introduction:
         "회사의 부당한 내용들을 고발하는 사이트이며 고발한 내용들 관리자가 허가를 하게되면 private 블록체인 네트워크에 저장이 되며 수정 삭제가 불가능하며 내용이 변조가 확인이 가능합니다.",
       skill:
@@ -22,6 +23,7 @@ const Data = () => {
     closesea: {
       title: "Close Sea",
       date: "(Web) 22.12.19 ~ 22.12.23",
+      view:"PC",
       introduction:
         "Goerli 테스트 네트워크 이용하여 NFT 마켓 플레이스를 사이트를 제작하였습니다.",
       skill: "React , Web3 , Solidity , Goerli",
@@ -37,6 +39,7 @@ const Data = () => {
     maskman: {
       title: "Mask Man",
       date: "(Web) 22.10.12 ~ 22.10.28",
+      view:"PC",
       introduction:
         "첫 리액트 프로젝트로 NFT의 스테이킹,민팅 등을 구현해보고 싶어서 웹페이지를 제작하였습니다.",
       skill: "React , Redux , Node.js , Express , MySQL",

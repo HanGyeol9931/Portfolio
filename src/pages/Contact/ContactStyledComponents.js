@@ -7,9 +7,6 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactCotentsBox = styled.div`
-  /* opacity: ${(props) => (props.show ? "1" : "0")};
-  transform: ${(props) =>
-    props.show ? "translateY(0)" : "translateY(100px);"}; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +29,7 @@ export const ContactCotentsBoxDiv = styled.div`
 `;
 export const ContactCotentsIconDiv = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;

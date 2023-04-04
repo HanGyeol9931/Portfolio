@@ -20,15 +20,22 @@ export const ContentContentImg = styled.img`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: 1px solid #999999;
   border-radius: 20px;
-  width: 80%;
-  height: 700px;
+  
+  width: ${props=>props.view==="Mobile"? "20vw":"30vw"};
+  max-width: ${props=>props.view==="Mobile"? "300px":"400px"};
+  height: ${props=>props.view==="Mobile"? "70vh":"30vw"};
+  max-height: ${props=>props.view==="Mobile"? "700px":"400px"};
+  /* 모바일 w:20vw h:70vh mw:300px mh:700px */
+  /* pc w:30vw h:30vw mw:400px mh:400px*/
   @media screen and (max-width: 991px) {
     width: 30vw;
     height: 50vh;
   }
   @media screen and (max-width: 767px) {
-    width: 60vw;
-    height: 20vh;
+    width: ${props=>props.view==="Mobile"? "60vw":"60vw"};
+    height: ${props=>props.view==="Mobile"? "50vh":"60vw"};
+    /* width: 60vw; */
+    /* height: 20vh; */
   }
 `;
 export const ContentContentImgDiv = styled.div`
@@ -57,7 +64,7 @@ export const ContentContentTitle = styled.div`
 export const ContentContentSmallTitle = styled.span`
   font-family: "Noto Sans KR", "Nanum Gothic";
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   @media screen and (max-width: 991px) {
     font-size: 12px;
   }
@@ -71,7 +78,7 @@ export const ContentContentText = styled.span`
 `;
 export const ContentContentTexts = styled.p`
   font-family: "Noto Sans KR", "Nanum Gothic";
-  font-size: 20px;
+  font-size: 16px;
   @media screen and (max-width: 991px) {
     font-size: 12px;
   }

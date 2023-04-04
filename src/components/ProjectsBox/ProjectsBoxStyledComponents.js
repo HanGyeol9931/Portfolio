@@ -54,6 +54,7 @@ export const ProjectsBoxContents = styled.div`
   }
 `;
 export const ProjectsBoxContent = styled.div`
+background-color:white;
   opacity: ${(props) => (props.show ? "1" : "0")};
   transform: ${(props) =>
     props.show ? "translateY(0)" : "translateY(100px);"};
@@ -63,9 +64,9 @@ export const ProjectsBoxContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid; */
-  margin: 100px 20px;
-  padding: 10px;
+
+  margin: 2vh 20px;
+  padding: 20px;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   transition: all 1s;
