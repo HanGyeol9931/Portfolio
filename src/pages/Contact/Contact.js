@@ -28,7 +28,7 @@ const Contact = () => {
       <ContactCotentsBoxDiv>
         <ContactCotentsBox show={numberBox}>
           <ContactCotentsIconDiv show={numberBox}>
-            <i class="bi bi-telephone-fill"></i>
+            <i className="bi bi-telephone-fill"></i>
           </ContactCotentsIconDiv>
           <ContactCotentsTitle show={numberBox}>
             Contact Number
@@ -46,7 +46,7 @@ const Contact = () => {
         </ContactCotentsBox>
         <ContactCotentsBox show={gitHubBox}>
           <ContactCotentsIconDiv show={gitHubBox}>
-            <i class="bi bi-globe-central-south-asia"></i>
+            <i className="bi bi-globe-central-south-asia"></i>
           </ContactCotentsIconDiv>
           <ContactCotentsTitle show={gitHubBox}>GitHub</ContactCotentsTitle>
           <ContactCotent
