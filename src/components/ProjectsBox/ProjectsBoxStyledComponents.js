@@ -1,37 +1,23 @@
 import styled from "styled-components";
 
 export const ProjectsCotents = styled.div`
-  filter:${props => props.modal ? "blur(5px)":"blur(0)"} ;
+  margin-top: 70px;
+  filter: ${(props) => (props.modal ? "blur(5px)" : "blur(0)")};
   opacity: ${(props) => (props.show ? "1" : "0")};
   transform: ${(props) =>
     props.show ? "translateY(0)" : "translateY(100px);"};
   transition: all 0.5s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1200px;
+  /* max-width: 1400px; */
+  width: 90vw;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  @media screen and (max-width: 1200px) {
-    width: 80vw;
-  }
-  @media screen and (max-width: 767px) {
-    position: relative;
-    height: auto;
-    width: 80vw;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
 `;
 
 export const ProjectsTitle = styled.div`
-    padding-top: 60px;
-    padding-bottom: 30px;
-  /* margin: 20px 0 50px; */
+  padding-top: 60px;
+  padding-bottom: 30px;
   text-align: center;
   color: #205929;
   font-size: 60px;
@@ -44,20 +30,18 @@ export const ProjectsTitle = styled.div`
   }
 `;
 export const ProjectsBoxContents = styled.div`
-  display: flex;
   height: 50%;
-  justify-content: space-around;
-  align-items: center;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-gap: 16px;
+  justify-content: center;
+  padding: initial;
   @media screen and (max-width: 767px) {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(70vw, max-content));
   }
 `;
 export const ProjectsBoxContent = styled.div`
-background-color:white;
-  opacity: ${(props) => (props.show ? "1" : "0")};
-  transform: ${(props) =>
-    props.show ? "translateY(0)" : "translateY(100px);"};
+  background-color: white;
   transition: all 0.5s;
   cursor: pointer;
   display: flex;
@@ -71,7 +55,7 @@ background-color:white;
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   transition: all 1s;
   :hover {
-    transform: translateY(-50px);
+    transform: translateY(-15px);
   }
   @media screen and (max-width: 1200px) {
     margin: 50px 15px;
@@ -93,32 +77,21 @@ export const ProjectsContentImg = styled.img`
   }
 `;
 export const ProjectsContentText = styled.div`
-text-shadow: -.03em .03em black;
   padding: 40px 0 10px;
   font-size: 40px;
   color: black;
   font-weight: bold;
-  @media screen and (max-width: 1200px) {
-    font-size: 25px;
-  }
   @media screen and (max-width: 767px) {
-    font-size: 20px;
-    padding: 20px 0;
-    font-weight: bold;
+    font-size: 25px;
   }
 `;
 export const ProjectsContentDate = styled.div`
-text-shadow: -.03em .03em #999999;
   padding: 10px 0 20px;
   font-size: 20px;
   color: #999999;
   font-weight: bold;
-  @media screen and (max-width: 1200px) {
-    font-size: 15px;
-  }
+
   @media screen and (max-width: 767px) {
-    font-size: 10px;
-    padding: 0 0 10px;
-    font-weight: bold;
+    font-size: 15px;
   }
 `;

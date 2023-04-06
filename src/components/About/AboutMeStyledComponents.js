@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const AboutContents = styled.div`
-  opacity: ${props => props.show ? "1":"0"};
-  transform:${props => props.show ? "translateY(0)":"translateY(100px);"}; 
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  transform: ${(props) =>
+    props.show ? "translateY(0)" : "translateY(100px);"};
   display: grid;
   grid-template-columns: 500px 500px;
   place-items: center;

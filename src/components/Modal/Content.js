@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ContentContainer,
   ContentContentImg,
@@ -12,24 +12,13 @@ import {
   ContentContentTexts,
   ContentContentDate,
 } from "./CotentStyledComponents";
-import Data from "../Data";
 
-const Content = ({ show }) => {
-  const [data, setData] = useState("report");
-  useEffect(() => {
-    if (show === "report") {
-      setData(Data().report);
-    } else if (show === "closesea") {
-      setData(Data().closesea);
-    } else if (show === "maskman") {
-      setData(Data().maskman);
-    }
-  }, [show]);
+const Content = ({ data }) => {
   function linkOpen() {
-    window.open(data.page.link);
+    window.open(data && data.page.link);
+    return;
   }
   function gitHubOpen() {
-    console.log(data.page.github);
     if (data.page.github === "") {
       alert("회사 API주소 노출문제로 인해 코드 미공개");
       return;
@@ -39,30 +28,40 @@ const Content = ({ show }) => {
   return (
     <ContentContainer>
       <ContentContentImgDiv>
-        <ContentContentImg view={data.view} src={data.img} />
+        <ContentContentImg view={data && data.view} src={data && data.img} />
       </ContentContentImgDiv>
       <ContentContent>
-        <ContentContentTitle>{data.title}</ContentContentTitle>
+        <ContentContentTitle>{data && data.title}</ContentContentTitle>
         <ContentContentBtns>
           <ContentContentBtn onClick={linkOpen}>Link</ContentContentBtn>
           <ContentContentBtn onClick={gitHubOpen}>GitHub</ContentContentBtn>
         </ContentContentBtns>
-        <ContentContentDate>{data.date}</ContentContentDate>
+        <ContentContentDate>{data && data.date}</ContentContentDate>
         <ContentContentTexts>
-          <ContentContentSmallTitle>소개 : </ContentContentSmallTitle>
-          <ContentContentText>{data.introduction}</ContentContentText>
+          <ContentContentSmallTitle>팀구성</ContentContentSmallTitle>
+          <ContentContentText>{data && data.member}</ContentContentText>
         </ContentContentTexts>
         <ContentContentTexts>
-          <ContentContentSmallTitle>기술스택 : </ContentContentSmallTitle>
-          <ContentContentText>{data.skill}</ContentContentText>
+          <ContentContentSmallTitle>소개</ContentContentSmallTitle>
+          <ContentContentText>{data && data.introduction}</ContentContentText>
         </ContentContentTexts>
         <ContentContentTexts>
-          <ContentContentSmallTitle>주요 기능 : </ContentContentSmallTitle>
-          <ContentContentText>{data.function}</ContentContentText>
+          <ContentContentSmallTitle>기술스택</ContentContentSmallTitle>
+          {data.skill &&
+            data.skill.split("- ").map((e) => {
+              return e === "" ? null : (
+                <ContentContentText>- {e}</ContentContentText>
+              );
+            })}
         </ContentContentTexts>
         <ContentContentTexts>
-          <ContentContentSmallTitle>담당 역할 : </ContentContentSmallTitle>
-          <ContentContentText>{data.role}</ContentContentText>
+          <ContentContentSmallTitle>담당 역할</ContentContentSmallTitle>
+          {data.role &&
+            data.role.split("- ").map((e) => {
+              return e === "" ? null : (
+                <ContentContentText>- {e}</ContentContentText>
+              );
+            })}
         </ContentContentTexts>
       </ContentContent>
     </ContentContainer>

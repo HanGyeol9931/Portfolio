@@ -12,13 +12,12 @@ import {
 } from "./EducationStyledComponents";
 
 const EducationComponent = () => {
-    
-    const [show, SetShow] = useState(false);
-    useEffect(() => {
-      setTimeout(() => {
-        SetShow(true);
-      }, 700);
-    }, []);
+  const [show, SetShow] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      SetShow(true);
+    }, 800);
+  }, []);
   return (
     <div>
       <EducationCotents show={show}>
@@ -34,15 +33,17 @@ const EducationComponent = () => {
             </EducationCotentTitle>
             <EducationCotentName>경일게임아카데미</EducationCotentName>
             <EducationCotentValue>
-              비전공자를 대상으로 하는 전문 교육 과정으로 HTML/CSS와 같은
-              기초적인 부분부터 시작하여 Node.js 기반의 백엔드, React를 활용한
-              프론트엔드, MySQL을 활용한 데이터베이스, AWS EC2 서버 배포 등을
-              배우며 웹 프로그래밍에 관한 전반적인 교육을 받았습니다. 뿐만
-              아니라, Web3를 활용한 웹 페이지
-              제작, Solidity를 활용한 스마트 컨트랙트 작성 및 배포 등을 배우면서
-              블록체인 개발에 관한 지식을 쌓았습니다. 그리고 교육 과정을
-              수료하는 동안 4번의 팀 프로젝트를 경험하였으며 이를 통해 팀 단위로
-              협업하여 개발하는 방법에 대해 배우고 터득할 수 있었습니다.
+              <p>- WEB3 개발자가 되기 위한 풀스택 개발자과정 수료 (9개월)</p>
+              <p>- 반응형웹에 대한 이해 및 개선 경험</p>
+              <p>- React를 사용한 웹,웹앱 개발 경험</p>
+              <p>- Redux를 통한 전역 상태관리 </p>
+              <p>- Nodejs를 이용한 개발 </p>
+              <p>- AWS EC2를 이용한 배포 경험</p>
+              <p>- Solidity를 이용한 ERC-20, ERC-721 컨트랙트 개발경험</p>
+              <p>- Truffle를 이용한 goerli 테스트넷 배포 경험</p>
+              <p>
+                - Hyperledger Fabric test-network를 이용한 체인 코드 개발 경험
+              </p>
             </EducationCotentValue>
           </EducationTitleCotents>
         </EducationCotent>

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const EducationCotents = styled.div`
-opacity: ${props => props.show ? "1":"0"};
-  transform:${props => props.show ? "translateY(0)":"translateY(100px);"}; 
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  transform: ${(props) =>
+    props.show ? "translateY(0)" : "translateY(100px);"};
   position: relative;
   display: grid;
   grid-template-columns: 1000px;
@@ -91,10 +92,11 @@ export const EducationCotentName = styled.div`
   font-weight: bold;
 `;
 export const EducationCotentValue = styled.div`
-  font-family: "Noto Sans KR", "Nanum Gothic";
-  margin: 0 0 15px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #999999;
-  /* font-weight: bold; */
+  p {
+    font-family: "Noto Sans KR", "Nanum Gothic";
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #999999;
+  }
 `;

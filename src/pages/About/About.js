@@ -8,8 +8,8 @@ const About = () => {
   return (
     <AboutContainer>
       <AboutMeContent />
-      <EducationComponent />
       <TechStacksComponent />
+      <EducationComponent />
     </AboutContainer>
   );
 };

@@ -44,7 +44,6 @@ export const ContactCotentsIconDiv = styled.div`
 `;
 export const ContactCotentsTitle = styled.div`
   position: relative;
-  text-shadow: -0.03em 0.03em black;
   padding: 30px;
   font-weight: bold;
   font-size: 20px;
@@ -55,7 +54,6 @@ export const ContactCotentsTitle = styled.div`
 `;
 export const ContactCotent = styled.div`
   position: relative;
-  text-shadow: -0.03em 0.03em black;
   font-weight: bold;
   font-size: 20px;
   color: block;

@@ -8,13 +8,13 @@ import Modal from "../../components/Modal/Modal";
 
 const Projects = () => {
   const [modal, setModal] = useState(false);
-  const [show, setShow] = useState(null);
+  const [data, setData] = useState({});
   return (
     <>
       <ProjectsContainer>
         <ProjectsCotentsDiv open={modal}>
-          <Modal open={modal} setOpen={setModal} show={show} />
-          <ProjectsBox modal={modal} setModal={setModal} setShow={setShow} />
+          <Modal open={modal} setOpen={setModal} data={data} />
+          <ProjectsBox modal={modal} setModal={setModal} setData={setData} />
         </ProjectsCotentsDiv>
       </ProjectsContainer>
     </>

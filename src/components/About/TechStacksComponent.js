@@ -26,7 +26,7 @@ const TechStacksComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       SetShow(true);
-    }, 900);
+    }, 700);
   }, []);
   return (
     <div>
@@ -82,7 +82,7 @@ const TechStacksComponent = () => {
             - styled-components 활용 가능
           </TechStacksCotentsTextValue>
           <TechStacksCotentsTextValue>
-            - Expo를 이용한 App 개발 및 배포 경험 (앱개발 프로젝트)
+            - React-Query, Redux-Thunk, Middleware를 통한 상태 관리
           </TechStacksCotentsTextValue>
         </TechStacksCotentsText>
         <TechStacksCotentsText>
@@ -93,9 +93,7 @@ const TechStacksComponent = () => {
           <TechStacksCotentsTextValue>
             - RESTful API 구현
           </TechStacksCotentsTextValue>
-          <TechStacksCotentsTextValue>
-            - 기본적인 CRUD 기능 구현
-          </TechStacksCotentsTextValue>
+
           <TechStacksCotentsTextValue>
             - Sequelize를 이용한 DB 입출력 기능 구현
           </TechStacksCotentsTextValue>
@@ -106,10 +104,10 @@ const TechStacksComponent = () => {
         <TechStacksCotentsText>
           <TechStacksCotentsTextTitle>MySQL</TechStacksCotentsTextTitle>
           <TechStacksCotentsTextValue>
-            - React-Query, Redux-Thunk, Middleware를 통한 상태 관리
+            - DB 스키마 작성 및 관리
           </TechStacksCotentsTextValue>
           <TechStacksCotentsTextValue>
-            - DB 스키마 작성 및 관리
+            - 기본적인 CRUD 기능 구현
           </TechStacksCotentsTextValue>
         </TechStacksCotentsText>
         <TechStacksCotentsText>
