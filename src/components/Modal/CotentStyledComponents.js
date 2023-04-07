@@ -59,7 +59,7 @@ export const ContentContent = styled.div`
 export const ContentContentTitle = styled.div`
   line-height: normal;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 60px;
   text-align: center;
   color: #205929;
   @media screen and (max-width: 767px) {
