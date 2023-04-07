@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
   grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   width: 100%;
   height: 100%;
@@ -17,13 +17,15 @@ export const ContentContainer = styled.div`
   }
 `;
 export const ContentContentImg = styled.img`
+  position: fixed;
+  top: ${(props) => (props.view === "Mobile" ? "22vh" : "27vh")};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: 1px solid #999999;
   border-radius: 20px;
   max-width: ${(props) => (props.view === "Mobile" ? "400px" : "600px")};
   max-height: ${(props) => (props.view === "Mobile" ? "700px" : "600px")};
-  min-width: ${(props) => (props.view === "Mobile" ? "350px" : "250px")};
-  min-height: ${(props) => (props.view === "Mobile" ? "300px" : "250px")};
+  min-width: ${(props) => (props.view === "Mobile" ? "200px" : "250px")};
+  min-height: ${(props) => (props.view === "Mobile" ? "500px" : "250px")};
   width: ${(props) => (props.view === "Mobile" ? "20vw" : "45vw")};
   height: ${(props) => (props.view === "Mobile" ? "60vh" : "45vw")};
   /* 모바일 w:20vw h:70vh mw:300px mh:700px */
@@ -35,6 +37,8 @@ export const ContentContentImg = styled.img`
     min-height: ${(props) => (props.view === "Mobile" ? "500px" : "400px")};
   }
   @media screen and (max-width: 767px) {
+    position: relative;
+    top: auto;
     width: ${(props) => (props.view === "Mobile" ? "65vw" : "80vw")};
     height: ${(props) => (props.view === "Mobile" ? "65vh" : "80vw")};
     min-width: ${(props) => (props.view === "Mobile" ? "200px" : "240px")};
@@ -44,9 +48,10 @@ export const ContentContentImg = styled.img`
   }
 `;
 export const ContentContentImgDiv = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 `;
 export const ContentContent = styled.div`
   padding: 20px;
@@ -54,7 +59,7 @@ export const ContentContent = styled.div`
 export const ContentContentTitle = styled.div`
   line-height: normal;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
   color: #205929;
   @media screen and (max-width: 767px) {
@@ -66,12 +71,6 @@ export const ContentContentSmallTitle = styled.div`
   font-family: "Noto Sans KR", "Nanum Gothic";
   font-weight: bold;
   font-size: 25px;
-  @media screen and (max-width: 991px) {
-    font-size: 20px;
-  }
-  @media screen and (max-width: 767px) {
-    font-size: 15px;
-  }
 `;
 export const ContentContentText = styled.div`
   line-height: normal;
@@ -108,14 +107,14 @@ export const ContentContentBtn = styled.button`
 export const ContentContentBtns = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  font-size: 20px;
 `;
 export const ContentContentDate = styled.div`
   line-height: normal;
   color: #205929;
   font-family: "Noto Sans KR", "Nanum Gothic";
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px 0 30px;
   @media screen and (max-width: 991px) {
     font-size: 25px;

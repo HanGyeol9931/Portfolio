@@ -7,7 +7,8 @@ export const ProjectsCotents = styled.div`
   transform: ${(props) =>
     props.show ? "translateY(0)" : "translateY(100px);"};
   transition: all 0.5s;
-  /* max-width: 1400px; */
+  max-width: 1400px;
+  padding: 50px 0;
   width: 90vw;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -16,11 +17,11 @@ export const ProjectsCotents = styled.div`
 `;
 
 export const ProjectsTitle = styled.div`
-  padding-top: 60px;
   padding-bottom: 30px;
   text-align: center;
   color: #205929;
   font-size: 60px;
+
   font-weight: bold;
   @media screen and (max-width: 991px) {
     font-size: 50px;
@@ -77,8 +78,8 @@ export const ProjectsContentImg = styled.img`
   }
 `;
 export const ProjectsContentText = styled.div`
-  padding: 40px 0 10px;
-  font-size: 40px;
+  padding: 25px 0 10px;
+  font-size: 35px;
   color: black;
   font-weight: bold;
   @media screen and (max-width: 767px) {
@@ -87,7 +88,7 @@ export const ProjectsContentText = styled.div`
 `;
 export const ProjectsContentDate = styled.div`
   padding: 10px 0 20px;
-  font-size: 20px;
+  font-size: 15px;
   color: #999999;
   font-weight: bold;
 

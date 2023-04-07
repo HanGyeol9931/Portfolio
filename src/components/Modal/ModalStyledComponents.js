@@ -23,19 +23,21 @@ export const ModalBox = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   width: 90vw;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 10px;
   background-color: white;
-  max-height: 80vh;
+  max-height: 95vh;
+  
   @media screen and (max-width: 767px) {
   }
 `;
 export const ModalBoxTop = styled.div`
   position: absolute;
+  z-index: 1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
