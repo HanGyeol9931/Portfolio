@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ContentContainer,
   ContentContentImg,
@@ -14,6 +14,9 @@ import {
 } from "./CotentStyledComponents";
 
 const Content = ({ data }) => {
+  useEffect(()=>{
+    console.log(data.img);
+  },[data])
   function linkOpen() {
     window.open(data && data.page.link);
     return;
