@@ -19,22 +19,16 @@ export const ContentContainer = styled.div`
 export const ContentContentImg = styled.img`
   position: fixed;
   top: ${(props) => (props.view === "Mobile" ? "22vh" : "27vh")};
+  top: ${(props) => (props.view === "Mobile" ? "calc(50vh - 35vh)" : "calc(50vh - 250px)")} ;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: 1px solid #999999;
   border-radius: 20px;
-  max-width: ${(props) => (props.view === "Mobile" ? "400px" : "600px")};
-  max-height: ${(props) => (props.view === "Mobile" ? "700px" : "600px")};
-  min-width: ${(props) => (props.view === "Mobile" ? "200px" : "250px")};
-  min-height: ${(props) => (props.view === "Mobile" ? "500px" : "250px")};
-  width: ${(props) => (props.view === "Mobile" ? "20vw" : "45vw")};
-  height: ${(props) => (props.view === "Mobile" ? "60vh" : "45vw")};
-  /* 모바일 w:20vw h:70vh mw:300px mh:700px */
-  /* pc w:30vw h:30vw mw:400px mh:400px*/
+  width: ${(props) => (props.view === "Mobile" ? "400px" : "500px")};
+  height: ${(props) => (props.view === "Mobile" ? "70vh" : "500px")};
   @media screen and (max-width: 991px) {
-    max-width: ${(props) => (props.view === "Mobile" ? "400px" : "400px")};
-    max-height: ${(props) => (props.view === "Mobile" ? "600px" : "400px")};
-    min-width: ${(props) => (props.view === "Mobile" ? "300px" : "400px")};
-    min-height: ${(props) => (props.view === "Mobile" ? "500px" : "400px")};
+    top: ${(props) => (props.view === "Mobile" ? "calc(50vh - 35vh)" : "calc(50vh - 20vw)")} ;
+    width: ${(props) => (props.view === "Mobile" ? "30vw" : "40vw")};
+  height: ${(props) => (props.view === "Mobile" ? "70vh" : "40vw")};
   }
   @media screen and (max-width: 767px) {
     position: relative;
@@ -43,15 +37,14 @@ export const ContentContentImg = styled.img`
     height: ${(props) => (props.view === "Mobile" ? "65vh" : "80vw")};
     min-width: ${(props) => (props.view === "Mobile" ? "200px" : "240px")};
     min-height: ${(props) => (props.view === "Mobile" ? "400px" : "240px")};
-    /* width: 60vw; */
-    /* height: 20vh; */
+    /* width: 60vw;
+    height: 20vh; */
   }
 `;
 export const ContentContentImgDiv = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 `;
 export const ContentContent = styled.div`
   padding: 20px;
